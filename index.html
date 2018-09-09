@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Dashboard</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+
+
+  <!-- Font Awesome JS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header text-right">
+        <img src="./images/Nukern-_HD.png" alt="logo" class="img-fluid" style="width: 150px;">
+        <button id="sidebarCollapse" class="btn btn-dark d-inline-block" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-align-justify"></i>
+        </button>
+        <strong>Nu</strong>
+      </div>
+
+      <ul class="list-unstyled components">
+        <h5>Main</h5>
+        <li class="active">
+          <a href="#">
+            <i class="fas fa-briefcase"></i>
+            dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="far fa-comment-alt"></i>
+            messenger<span class="notification-orange"> 2 </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-user"></i>
+            clients
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-tag"></i>
+            billings / orders
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-question-circle"></i>
+            support
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-file-word"></i>
+            reports <span class="notification-dark"> 3 </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-cog"></i>
+            setup
+          </a>
+        </li>
+      </ul>
+
+      <ul class="list-unstyled">
+        <h5> Shortcuts <span class="notification-dark" style="color:white"> + </span> </h5>
+        <li>
+          <a href="#">
+            <i class="fas fa-file-word"></i>
+            yearly report
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-plus-square"></i>
+            new shortcut
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+      <div class="container-fluid">
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col-sm-6">
+                <button id="sidebarCollapse1" class="btn btn-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fas fa-align-justify"></i>
+                </button>
+                <h3>Dashboard</h3>
+              </div>
+              <div class="col-sm-6 text-right">
+                <div class="search-bar">
+                  <p class="d-inline">Search <i class="fas fa-search"></i> </p>
+                  <img src="./images/user.png" alt="user" class="img-fluid d-inline" style="width:35px;"><a href="#"> <i
+                      class="fa fa-caret-down"></i></a>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col download text-right">
+                <p> <span class="notification-orange"> 3 </span> new update available <a href="#"><i class="fas fa-download"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col d-inline">
+                <h5 class="card-heading d-inline"> System vitals</h5>
+                <h6 class="d-inline calendar"> LAST WEEK <a href="#"><i class="fa fa-caret-down"></i></a> </h6>
+                <a href="#"><i class="fas fa-cog"></i></a>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col">
+                    <canvas id="myChart" width="300" height="200"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-6"><canvas id="myChart1" width="200" height="150"></canvas></div>
+                  <div class="col-md-6"><canvas id="myChart2" width="200" height="150"></canvas></div>
+                  <div class="col-md-6"><canvas id="myChart3" width="200" height="150"></canvas></div>
+                  <div class="col-md-6"><canvas id="myChart4" width="200" height="150"></canvas></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-content">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-heading d-inline"> Recent orders</h5>
+                    <a href="#"> <i class="fas fa-filter"></i></a>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <table class="table table-responsive w-100 d-block d-md-table">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col">STATUS</th>
+                          <th scope="col">CLIENT</th>
+                          <th scope="col">ORDER#</th>
+                          <th scope="col">DATE</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"> <span class="badge badge-pill badge-primary">PAID</span> <span class="badge badge-pill badge-success">ACTIVE</span></th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>Tuesday 8:30</td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><span class="badge badge-pill badge-primary">PAID</span> <span class="badge badge-pill badge-success">ACTIVE</span></th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>Today 16:30</td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><span class="badge badge-pill badge-primary">PAID</span> <span class="badge badge-pill badge-secondary">INACTIVE</span></th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>Yesterday</td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><span class="badge badge-pill badge-secondary">UNPAID</span> <span class="badge badge-pill badge-secondary">INACTIVE</span></th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>23rd May</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-content">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-heading d-inline"> Recent tickets</h5>
+                    <a href="#"> <i class="fas fa-filter"></i></a>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <table class="table table-responsive w-100 d-block d-md-table">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col">STATUS</th>
+                          <th scope="col">SUBJECT</th>
+                          <th scope="col">DEPARTMENT</th>
+                          <th scope="col">DATE</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"> <span class="badge badge-pill badge-success">OPEN</span></th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>Tuesday 8:30</td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><span class="badge badge-pill badge-success">OPEN</span></th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>Today 16:30</td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><span class="badge badge-pill badge-warning">PROGRESS</span></th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>Yesterday</td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><span class="badge badge-pill badge-danger">CLOSED</span></th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>23rd May</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse, #sidebarCollapse1').on('click', function () {
+        $('#sidebar').toggleClass('active');
+      });
+    });
+  </script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
